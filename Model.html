@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+        <title>Evening Walk Project 148</title>
+    </head>
+
+    <body>
+        <a-scene>
+            <a-asset>
+                <a-asset-item id="man_model" src="./Assets/walk-japanese-man/scene.gltf"></a-asset-item>
+                <a-asset-item id="cat_model" src="./Assets/cat/scene.gltf"></a-asset-item>
+                <a-asset-item id="bench_model" src="./Assets/wooden_bench/scene.gltf"></a-asset-item>
+                <a-asset-item id="lamp_model" src="./Assets/street_lamp/scene.gltf"></a-asset-item>
+            </a-asset>
+
+            <a-sky color="#00001a"></a-sky>
+            <a-entity>
+                <a-plane position="0 0 -3" width="15" height="7" rotation="-90 0 0" color="black" shadow="recieve:true"></a-plane>
+            </a-entity>
+            <a-entity>
+                <a-entity position="-1 0 -3" gltf-model="#man_model"></a-entity>
+            </a-entity>
+            <a-entity>
+                <a-entity position="1 0 -3" scale="0.2 0.2 0.2" gltf-model="#cat_model" rotation="0 -90 0"></a-entity>
+            </a-entity>
+            <a-entity>
+                <a-entity position="-3 0 -3" scale="0.1 0.1 0.1" gltf-model="#lamp_model"></a-entity>
+            </a-entity>
+            <a-entity>
+                <a-entity position="4 0 -3" scale="0.006 0.006 0.006" rotation="0 180 0" gltf-model="#bench_model"></a-entity>
+            </a-entity>
+
+            <a-entity light="type:point; castShadow:true; color:yellow; intensity:2.35" position="-3 1 -3"></a-entity>
+            <a-entity light="type:ambient"></a-entity>
+        </a-scene>
+    </body>
+</html>
